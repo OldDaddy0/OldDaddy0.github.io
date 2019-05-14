@@ -116,8 +116,8 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = '/assets/ins-min/' + data.link[i];
-          var src = '/assets/ins/' + data.link[i];
+          var minSrc = 'https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/photos-min/' + data.link[i];
+          var src = 'https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/photos/' + data.link[i];
           var type = data.type[i];
           var target = src;
 

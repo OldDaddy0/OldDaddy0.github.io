@@ -166,31 +166,100 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-keynote-001" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-create-private-pods" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/15/keynote-001/">无印良品管理笔记</a>
+      <a class="article-title" href="/2019/05/15/create-private-pods/">创建私有库的一些小技巧</a>
     </h1>
   
 
         
-        <a href="/2019/06/15/keynote-001/" class="archive-article-date">
-  	<time datetime="2019-06-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-15</time>
+        <a href="/2019/05/15/create-private-pods/" class="archive-article-date">
+  	<time datetime="2019-05-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2018年底从美图离开，2019年4月，以小开发的身份加盟老东家。工作的变化，个人的选择带来的是职涯发展的巨大变动。过去三年在美图积累的管理经验，人脉关系，未来规划统统推倒重来！但是个人对管理依然有着浓浓的兴趣，也希望自己能够在业余的时间利用阅读、培训的机会提高个人管理、沟通相关的能力。</p>
-<p>非常偶然的一次机会，在公司的图书列表中找到了这本《无印良品管理笔记》，在翻阅前面几页之后，我下定决心要细细翻阅一下，并且能够种草给我的朋友。在今天乘坐着开往朋友工作地的动车上，我重新翻阅了一遍这本书并把核心的一些理念用思维导图的方式整理出来（最后我放弃了种草对方，因为我觉得她已经做到了很多书中提及的方法）。</p>
-<p>希望对大家有帮助，xmind原件欢迎微信我<code>Qublier</code>，免费赠送。</p>
-<p><img src="http://assets.processon.com/chart_image/5db19966e4b0893e9a62be40.png" alt="管理笔记"></p>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>创建private pods流程</p>
+<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><h4 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h4><ul>
+<li>需要安装Cocapods</li>
+<li>Git仓库要求:<ul>
+<li>需要对应的repo的master读写权限。</li>
+</ul>
+</li>
+</ul>
+<h4 id="创建步骤"><a href="#创建步骤" class="headerlink" title="创建步骤"></a>创建步骤</h4><ul>
+<li><strong>将管理podspec文件的repo放入到本地的cocoapods repo文件夹中</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ pod repo add REPO_NAME SOURCE_URL	</span><br><span class="line">	REPO_NAME: oa-ibg-tech-podspecs</span><br><span class="line">	SOURCE_URL: git@git.code.oa.com:IBG-TECH/PodSpecs.git</span><br><span class="line">直接复制以下代码运行即可:</span><br><span class="line">$ pod repo add oa-ibg-tech-podspecs git@git.code.oa.com:IBG-TECH/PodSpecs.git</span><br></pre></td></tr></table></figure>
+<p>添加完之后如果成功 repo会存入以下文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.cocoapods/repos/REPO_NAME</span><br></pre></td></tr></table></figure>
+<blockquote>
+<font color="red">注意事项：</font>
 
+<ul>
+<li>REPO_NAME 为本地的repo名称 </li>
+<li>可以先到目录<code>~/.cocoapods/repos/</code>确认repo是否已经添加到本地</li>
+<li>SOURCE_URL 服务端的repo URL （ssh https任选）</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>为目标工程branch添加tag 在本地的git 目录下打开terminal</strong></li>
+</ul>
+<blockquote>
+<font color="red">注意事项：</font>
+
+<ul>
+<li>该目录为组件工程的目录 不是pods add的目录</li>
+<li>tag必须添加 否者无法找到对应的工程branch</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git tag TAG_VERSION</span><br><span class="line">$ git push --tag</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>创建Podspec文件 <a href="podspec_basic_reference.md">Podspec Basic Reference</a></strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Pod::Spec.new do |s|</span><br><span class="line">s.name         = &quot;DebugOptions&quot;</span><br><span class="line">s.version      = &quot;0.0.1&quot;</span><br><span class="line">s.summary      = &quot;小组件&quot;</span><br><span class="line">	</span><br><span class="line">s.description  = &lt;&lt;-DESC</span><br><span class="line">一个便捷的小组件。</span><br><span class="line">DESC</span><br><span class="line">	</span><br><span class="line">s.homepage     = &quot;http://github.com/DebugOptions&quot;</span><br><span class="line">	</span><br><span class="line">s.license      = &#123;</span><br><span class="line">	:type =&gt; &apos;Copyright&apos;,</span><br><span class="line">	:text =&gt; &lt;&lt;-LICENSE</span><br><span class="line">		© 1998-2019 Company. All rights reserved.</span><br><span class="line">	LICENSE</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line">s.author             = &#123; &quot;holaween&quot; =&gt; &quot;lianghwen@live.cn&quot; &#125;</span><br><span class="line">s.social_media_url   = &quot;http://twitter.com/haowenliang&quot;</span><br><span class="line">	</span><br><span class="line">s.platform     = :ios, &quot;9.0&quot;</span><br><span class="line">s.source       = &#123; :git =&gt; &quot;http://github.com/DebugOptions.git&quot;, :tag =&gt; &quot;#&#123;s.version&#125;&quot; &#125;</span><br><span class="line">	</span><br><span class="line">s.source_files  = &quot;Classes&quot;, &quot;DebugOptions/**/*.&#123;h,m,mm&#125;&quot;</span><br><span class="line">s.public_header_files = &quot;DebugOptions/**/*.h&quot;</span><br><span class="line">	</span><br><span class="line">s.requires_arc = true</span><br><span class="line">	</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<p>以上为Podspec模版 如果用pod spec create生成 需要手动修改以上内容</p>
+<blockquote>
+<font color="red">注意事项：</font>
+
+<ul>
+<li>tag为刚才git中标记的branch tag</li>
+<li><a href="http://guides.rubygems.org/patterns/#semantic-versioning" target="_blank" rel="noopener">tag命名规范参考</a></li>
+<li>对于包涵图片，本地化strings文件的pod，将该类资源文件做成bundle</li>
+<li>本地化strings文件必须在bundle里面才能起作用</li>
+<li><p>调用方法</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NSString *path = [[NSBundle mainBundle] pathForResource:@&quot;Bundle_Name&quot; ofType:@&quot;bundle&quot;];</span><br><span class="line">NSBundle *bundle = [NSBundle bundleWithPath:path];</span><br><span class="line">[bundle localizedStringForKey:@&quot;String_Key&quot; value:@&quot;default value&quot; table:@&quot;Table_Name&quot;];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>上传PodSpec文件</strong></li>
+</ul>
+<pre><code>pod repo push REPO_NAME .podspec文件目录
+</code></pre><p>该步骤会检测对应的pod目录是否validate 验证通过后 会将PodSpec文件上传到同名的文件夹中 结构如下:</p>
+<pre><code>├── PodSpecs
+    └── [SPEC_NAME]
+        └── [VERSION]
+            └── [SPEC_NAME].podspec
+</code></pre><p>关于如何规避validate过程产生的问题，见 <a href="podspec_basic_reference.md">Podspec Basic Reference/<font color="red">格式检查 （非常重要）</font></a></p>
+<ul>
+<li><strong>项目导入pod</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Uncomment this line to define a global platform for your project</span><br><span class="line">platform :ios, &apos;9.0&apos;</span><br><span class="line">	</span><br><span class="line">source &apos;官方podspec文件的URL&apos;</span><br><span class="line">source &apos;podspec文件的SOURCE_URL&apos;</span><br><span class="line"></span><br><span class="line">target &apos;PROJECT_NAME&apos; do</span><br><span class="line"></span><br><span class="line">	pod &apos;SPEC_NAME&apos;, &apos;~&gt; VERSION&apos;</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<font color="red">注意：source的url应为https</font>
+
+<ul>
+<li><strong>误操作的移除／修改</strong></li>
+</ul>
+<p>上传之前应当检查确保无误 如果不是必要状况 不要轻易删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pod trunk delete PODNAME VERSION</span><br><span class="line">	</span><br><span class="line">pod trunk deprecate PODNAME</span><br></pre></td></tr></table></figure>
       
 
       
@@ -203,7 +272,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Keynote</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Tips</a>
         		</li>
       		
 		</ul>
@@ -241,7 +310,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
     </nav>
   
 
@@ -346,6 +415,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">广告</a>
               </li>
              
@@ -354,15 +427,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">Skills</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Skills</a>
               </li>
              
               <li class="article-tag-list-item">

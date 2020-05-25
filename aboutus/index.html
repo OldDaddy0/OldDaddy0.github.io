@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认识我们</title>
+    <link href="http://cdn.bootstrapmb.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    <style type="text/css">
+        .demo{padding: 2em 0;}
+        .our-team{
+            padding: 30px 0 40px;
+            background: #f7f5ec;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .our-team .pic{
+            display: inline-block;
+            width: 130px;
+            height: 130px;
+            margin-bottom: 50px;
+            z-index: 1;
+            position: relative;
+        }
+        .our-team .pic:before{
+            content: "";
+            width: 100%;
+            height: 0;
+            border-radius: 50%;
+            background: #ee4266;
+            position: absolute;
+            bottom: 135%;
+            right: 0;
+            left: 0;
+            opacity: 0.2;
+            transform: scale(3);
+            transition: all 0.3s linear 0s;
+        }
+        .our-team:hover .pic:before{ height: 100%; }
+        .our-team .pic:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #ee4266;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .our-team .pic img{
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            transform: scale(1);
+            transition: all 0.9s ease 0s;
+        }
+        .our-team:hover .pic img{
+            box-shadow: 0 0 0 14px #f7f5ec;
+            transform: scale(0.7);
+        }
+        .our-team .team-content{ margin-bottom: 30px; }
+        .our-team .title{
+            font-size: 22px;
+            font-weight: 700;
+            color: #4e5052;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+        .our-team .post{
+            display: block;
+            font-size: 15px;
+            color: #4e5052;
+            text-transform:capitalize;
+        }
+        .our-team .social{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            background: #eb1768;
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            transition: all 0.5s ease 0s;
+        }
+        .our-team:hover .social{ bottom: 0; }
+        .our-team .social li{ display: inline-block; }
+        .our-team .social li a{
+            display: block;
+            padding: 10px;
+            font-size: 17px;
+            color: #fff;
+            transition: all 0.3s ease 0s;
+        }
+        .our-team .social li a:hover{
+            color: #eb1768;
+            background: #f7f5ec;
+        }
+        @media only screen and (max-width: 990px){
+            .our-team{ margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/olddaddy.png">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">阿布老爹</h3>
+                            <span class="post">互联网从业人员</span>
+                        </div>
+                        <ul class="social">
+                            <li><a href="https://www.youtube.com/channel/UCb_-cSux_g0EFrYPfISEhcQ" class="fa fa-youtube"></a></li>
+                            <li><a href="https://www.facebook.com/haowen.dp/" class="fa fa-facebook"></a></li>
+                            <li><a href="https://twitter.com/haowenliang" class="fa fa-twitter"></a></li>
+                            <!-- <li><a href="#" class="fa fa-linkedin"></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="images/sheep.png">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">菜鸟主管</h3>
+                            <span class="post">菜鸟主管</span>
+                        </div>
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-google-plus"></a></li>
+                            <li><a href="#" class="fa fa-linkedin"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

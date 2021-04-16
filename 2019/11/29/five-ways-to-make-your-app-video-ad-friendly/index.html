@@ -6,20 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://olddaddy0.github.io">
-  <title>一些可能性较高的Git使用约定 | iAds | 在这里，总有你想要的～</title>
+  <title>让视频广告体验更加友好的五种方法 | iAds | 在这里，总有你想要的～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="tags每个发布的版本会有 tag 跟踪。 eg.) v1.0.0 mastermaster 是最稳定的分支，随时可以当作 release 版本，只能从其他分支合入，不能在上面做任何提交；每个版本发布之后，对应的发布分支会合并到 master。只接收 release/hotfix 分支的合并。 develop主干开发分支，是稳定的、最新的分支，主要合并其他分支，比如 feature 分支、bugf">
-<meta name="keywords" content="Skill,Git">
+  <meta name="description" content="原文：Five ways to make your app video-ad friendly 允许视频数据预拉取缓存（Load ads well in advance to permit buffering）        The moment you load a video ad, behind the scenes the ad starts buffering (essent">
+<meta name="keywords" content="GoogleAds,广告">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一些可能性较高的Git使用约定">
-<meta property="og:url" content="https://olddaddy0.github.io/2019/09/03/Some basic git references/index.html">
+<meta property="og:title" content="让视频广告体验更加友好的五种方法">
+<meta property="og:url" content="https://olddaddy0.github.io/2019/11/29/five-ways-to-make-your-app-video-ad-friendly/index.html">
 <meta property="og:site_name" content="iAds | 在这里，总有你想要的～">
-<meta property="og:description" content="tags每个发布的版本会有 tag 跟踪。 eg.) v1.0.0 mastermaster 是最稳定的分支，随时可以当作 release 版本，只能从其他分支合入，不能在上面做任何提交；每个版本发布之后，对应的发布分支会合并到 master。只接收 release/hotfix 分支的合并。 develop主干开发分支，是稳定的、最新的分支，主要合并其他分支，比如 feature 分支、bugf">
+<meta property="og:description" content="原文：Five ways to make your app video-ad friendly 允许视频数据预拉取缓存（Load ads well in advance to permit buffering）        The moment you load a video ad, behind the scenes the ad starts buffering (essent">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-04-16T09:05:32.916Z">
+<meta property="og:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_M9Wdk5M.max-1000x1000.png">
+<meta property="og:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4v2.max-1000x1000.png">
+<meta property="og:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/2v2.max-1000x1000.png">
+<meta property="og:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/1v3.max-1000x1000.png">
+<meta property="og:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/5v3.max-1000x1000.png">
+<meta property="og:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3v2_AewBdm9.max-1000x1000.png">
+<meta property="og:updated_time" content="2021-04-16T09:03:25.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一些可能性较高的Git使用约定">
-<meta name="twitter:description" content="tags每个发布的版本会有 tag 跟踪。 eg.) v1.0.0 mastermaster 是最稳定的分支，随时可以当作 release 版本，只能从其他分支合入，不能在上面做任何提交；每个版本发布之后，对应的发布分支会合并到 master。只接收 release/hotfix 分支的合并。 develop主干开发分支，是稳定的、最新的分支，主要合并其他分支，比如 feature 分支、bugf">
+<meta name="twitter:title" content="让视频广告体验更加友好的五种方法">
+<meta name="twitter:description" content="原文：Five ways to make your app video-ad friendly 允许视频数据预拉取缓存（Load ads well in advance to permit buffering）        The moment you load a video ad, behind the scenes the ad starts buffering (essent">
+<meta name="twitter:image" content="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_M9Wdk5M.max-1000x1000.png">
   
     <link rel="alternative" href="/atom.xml" title="iAds | 在这里，总有你想要的～" type="application/atom+xml">
   
@@ -165,104 +172,91 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Some basic git references" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-five-ways-to-make-your-app-video-ad-friendly" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      一些可能性较高的Git使用约定
+      让视频广告体验更加友好的五种方法
     </h1>
   
 
         
-        <a href="/2019/09/03/Some basic git references/" class="archive-article-date">
-  	<time datetime="2019-09-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-03</time>
+        <a href="/2019/11/29/five-ways-to-make-your-app-video-ad-friendly/" class="archive-article-date">
+  	<time datetime="2019-11-29T03:28:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="tags"><a href="#tags" class="headerlink" title="tags"></a>tags</h5><p>每个发布的版本会有 tag 跟踪。</p>
-<pre><code>eg.) v1.0.0
-</code></pre><h5 id="master"><a href="#master" class="headerlink" title="master"></a>master</h5><p>master 是最稳定的分支，随时可以当作 release 版本，只能从其他分支合入，不能在上面做任何提交；每个版本发布之后，对应的发布分支会合并到 master。<strong>只接收 release/hotfix 分支</strong>的合并。</p>
-<h5 id="develop"><a href="#develop" class="headerlink" title="develop"></a>develop</h5><p>主干开发分支，是稳定的、最新的分支，主要合并其他分支，比如 feature 分支、bugfix 分支。每个版本发布的 release 分支从 develop 分支检出。对于旧版本的 bugfix，需要从 develop 检出分支，修复后合回 develop。</p>
-<h5 id="release"><a href="#release" class="headerlink" title="release"></a>release</h5><p>每个确认要发布的版本测试稳定之后，基于 develop 检出独立的 release 分支，来确保发布流的稳定；发布之后，合到主干分支（develop 和 master），并打上 tag。每个 release 分支会保留 2 个版本。命名规则 release + 版本描述，示例 release_v1.0.0。</p>
-<pre><code>eg.) release/release_v1.0.0
-</code></pre><h5 id="feature（具体按功能命名）"><a href="#feature（具体按功能命名）" class="headerlink" title="feature（具体按功能命名）"></a>feature（具体按功能命名）</h5><p>新功能（需求）的开发分支，新功能在 feature 分支开发并测试稳定之后，确认发布时，合并到develop进行进步一测试，等待发布。合并时注意，先 rebase develop 分支，然后提交合并到 develop 分支，并且要确保提交历史整洁性。</p>
-<pre><code>eg.) feature/moment_preview
-     feature/bugfix_moment_preview
-</code></pre><h5 id="hotfix"><a href="#hotfix" class="headerlink" title="hotfix"></a>hotfix</h5><p>紧急 bug 修复分支。已发布的版本，需要紧急修复 bug 重新上线，从之前 release 分支检出 hotfix 分支来修复和发布；发布之后，合到主干分支（develop 和 master），并打上 tag。命名规则 hotfix + 版本描述，示例 hotfix_v1.0.0。</p>
-<pre><code>eg.) release/hotfix_v1.0.1
-</code></pre><h2 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h2><h4 id="commit-原子化"><a href="#commit-原子化" class="headerlink" title="commit 原子化"></a>commit 原子化</h4><ul>
-<li>为了方便追溯，每个 commit 以尽量小的单位进行 commit，粒度要适当。</li>
-<li>一个 commit 一个需求或功能点，一个 commit  一个 bugfix。</li>
-</ul>
-<h4 id="commit-message："><a href="#commit-message：" class="headerlink" title="commit message："></a>commit message：</h4><ul>
-<li>对于较大内容体的提交，commit 的 message 第一行写总结性的描述，然后空一行，再对提交做详细的描述</li>
-<li>commit 的 message  要详细的描述修改内容，对于解决的问题，需要描述原因。<ul>
-<li>参考：<strong>解决因为 xxx 而引起 xxx 的问题，优化了因为 xxx 导致的 xxx 问题</strong>；如：解决因为 xxx 而导致崩溃问题，解决因为 xxx 情况下空指针导致的崩溃问题</li>
-<li>禁止：解决了一个崩溃问题，解决了UI不对的问题……</li>
-</ul>
-</li>
-<li>需要注明改动的影响面，尤其是在bug平台上无法体现的优化。<ul>
-<li>格式：换行，[影响范围] xxxx。</li>
-</ul>
-</li>
-</ul>
-<h4 id="commit-整合"><a href="#commit-整合" class="headerlink" title="commit 整合"></a>commit 整合</h4><ul>
-<li>禁止将过于零散的 commit 提交合并到主干分支：对于需求或者模块化的 commit，尤其是在协作开发时，如果 commit 过于零散的，需要整合成一个 commit，使用 git rebase -i。</li>
-</ul>
-<h4 id="commit-样板"><a href="#commit-样板" class="headerlink" title="commit 样板"></a>commit 样板</h4><ul>
-<li><strong>【标题】内容</strong>，如“【Feature】xxxxx”。</li>
-</ul>
-<h4 id="commit-标题："><a href="#commit-标题：" class="headerlink" title="commit 标题："></a>commit 标题：</h4><ul>
-<li><p><strong>【Update】</strong> 工程配置等相关信息更新</p>
-</li>
-<li><p><strong>【Optimize】</strong> 优化类的提交</p>
-</li>
-<li><p><strong>【Feature】</strong> 需求方面的提交</p>
-</li>
-<li><p><strong>【Bugfix】</strong> 针对 bugfree 上的 bug 修复</p>
-<ul>
-<li>对于 Bug 的 commit需要体现具体的bugid或者bug链接。</li>
-</ul>
-</li>
-</ul>
-<h4 id="commit示例"><a href="#commit示例" class="headerlink" title="commit示例"></a>commit示例</h4><pre><code>【Bugfix-90011】解决480*320屏幕的机型，特效框显示不完整问题
+        <div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_M9Wdk5M.max-1000x1000.png"><br></div>
 
-【Feature】产品要求修改设置页检查更新new逻辑
+<p>原文：<a href="https://www.blog.google/products/admob/five-ways-to-make-your-app-video-ad-friendly/" target="_blank" rel="noopener">Five ways to make your app video-ad friendly</a></p>
+<h4 id="允许视频数据预拉取缓存（Load-ads-well-in-advance-to-permit-buffering）"><a href="#允许视频数据预拉取缓存（Load-ads-well-in-advance-to-permit-buffering）" class="headerlink" title="允许视频数据预拉取缓存（Load ads well in advance to permit buffering）"></a>允许视频数据预拉取缓存（Load ads well in advance to permit buffering）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4v2.max-1000x1000.png" width="320"><br></div>
 
-【Optimize】优化消息收发速度，提升10%成功率
 
-【Update】更新人脸识别静态库v1.1.0版本：优化人脸识别速度
-</code></pre><h2 id="git-merge-amp-git-rebase"><a href="#git-merge-amp-git-rebase" class="headerlink" title="git merge &amp; git rebase"></a>git merge &amp; git rebase</h2><h4 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge"></a>git merge</h4><ul>
-<li><strong>Fast-Forward</strong> 的合并才能进行直接 merge，否则必须使用 rebase，确保时间轴的单一性。</li>
-<li>对于已经 merge 过的分支，不要使用  rebase，避免重复的 commit 节点。</li>
-</ul>
-<h4 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h4><ul>
-<li>本地分支开发一段时间之后，如果要合并回主干分支，必须先 rebase 主干分支，再进行合并。</li>
-<li>减少不必要的 commit，对于需求或者模块化的 commit，尤其是在协作开发时，如果 commit 过于零散的，需要整合成一个 commit 才能合并到主干分支；使用 git rebase -i。</li>
-</ul>
-<h2 id="Merge-request"><a href="#Merge-request" class="headerlink" title="Merge request"></a>Merge request</h2><ul>
-<li>严格遵循 <strong>分支模型</strong> 提交合并请求</li>
-<li>代码必须经过严格自测，才能提交合并到主干分支；对于新功能，必须达到一定的完成度，才能合并到主干分支。</li>
-<li>尽早提交 merge request，避免代码堆积引起过多冲突，增加审核成本。</li>
-<li><strong>当存在还没有合并的 merge request，需要合并完之后，再 rebase 提交，确保时间轴的单一性</strong>。</li>
-<li>Bugfix 阶段，merge request 中 commit 数量不能超过5个；需求阶段可灵活控制。</li>
-<li>Bugfix 阶段，修改了 Bugfree 状态的 commit，要及时合并（当天的要在当天合并完）。</li>
-<li>Merge request 被合并之后，及时清理无用的远程分支。</li>
-</ul>
-<h2 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h2><ul>
-<li>master、develop 等主干同步时，用<strong>git log master..develop</strong>，确认是否一致</li>
-</ul>
-<p>技巧：</p>
-<pre><code>git log branch1..branch2  # 显示 branch2 比 branch1 前进多少 commit
-</code></pre>
+<blockquote>
+<p>The moment you load a video ad, behind the scenes the ad starts buffering (essentially pre-loading) the video</p>
+</blockquote>
+<p>开始加载一个视频广告，仅仅是视频资源开始启动资源加载和缓存，所以<code>the network is the bottleneck</code>。在用户无感知的前提下，触发加载视频广告，在一定的缓存数据量后再展示广告，用户体验更好</p>
+<blockquote>
+<p>Load your ad at least 15 seconds in advance of showing it</p>
+</blockquote>
+<p>对于广告加载的超时时长或者提前预拉的时间间隔可做参考</p>
+<h4 id="及时释放无效广告（Free-unused-ads）"><a href="#及时释放无效广告（Free-unused-ads）" class="headerlink" title="及时释放无效广告（Free unused ads）"></a>及时释放无效广告（Free unused ads）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/2v2.max-1000x1000.png" width="320"><br></div>
+
+<p>场景例子：加载了激励视频广告，但用户拒绝了观看，及时释放该广告。（内存、视频解码器…)</p>
+<blockquote>
+<p>On Android, we recommend you null your reference to the ad, and if you’re using native ads, call <code>UnifiedNativeAd.destroy()</code> on the main thread. On iOS, set your reference to nil.</p>
+</blockquote>
+<p>Android 推荐将广告引用置空，如果是调用原生广告，需要在住线程调用<code>UnifiedNativeAd.destroy()</code>；iOS则是将引用置 nil。</p>
+<h4 id="避免加载多个广告（Avoid-loading-multiple-concurrent-ads）"><a href="#避免加载多个广告（Avoid-loading-multiple-concurrent-ads）" class="headerlink" title="避免加载多个广告（Avoid loading multiple concurrent ads）"></a>避免加载多个广告（Avoid loading multiple concurrent ads）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/1v3.max-1000x1000.png" width="320"><br></div>
+
+<blockquote>
+<p>Every phone has a limit to the number of videos it can hold in a prepared state.</p>
+</blockquote>
+<p>在这个大前提下，仅加载你需要的广告，以获得最好的成功曝光体验。</p>
+<h4 id="在广告loaded回调后再展示广告（Don’t-show-an-ad-before-receiving-a-notification-that-it-has-loaded）"><a href="#在广告loaded回调后再展示广告（Don’t-show-an-ad-before-receiving-a-notification-that-it-has-loaded）" class="headerlink" title="在广告loaded回调后再展示广告（Don’t show an ad before receiving a notification that it has loaded）"></a>在广告loaded回调后再展示广告（Don’t show an ad before receiving a notification that it has loaded）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/5v3.max-1000x1000.png" width="320"><br></div>
+
+<p>GMA SDK通过通知notifications同步视频广告的加载及播放状态。</p>
+<blockquote>
+<p>On Android, this notification arrives through AdListener.onAdLoaded().</p>
+</blockquote>
+<h4 id="在播放视频广告前释放应用自身的视频资源（Be-extra-cautious-combining-video-ads-with-video-content）"><a href="#在播放视频广告前释放应用自身的视频资源（Be-extra-cautious-combining-video-ads-with-video-content）" class="headerlink" title="在播放视频广告前释放应用自身的视频资源（Be extra cautious combining video ads with video content）"></a>在播放视频广告前释放应用自身的视频资源（Be extra cautious combining video ads with video content）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3v2_AewBdm9.max-1000x1000.png" width="320"><br></div>
+
+<p>内存中避免同时加载着多个视频资源（不管都是视频广告还是应用内的视频内容）。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>受益，就打赏！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -273,11 +267,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Skill</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GoogleAds</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">广告</a>
         		</li>
       		
 		</ul>
@@ -333,7 +327,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://olddaddy0.github.io/2019/09/03/Some basic git references/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://olddaddy0.github.io/2019/11/29/five-ways-to-make-your-app-video-ad-friendly/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -347,18 +341,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/01/Quick start podspec/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/12/02/upgrade-your-banner-ads-with-new-adaptive-anchor-banners/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何快速创建Podspec文件
+          自适应锚定横幅广告 （Upgrade your banner ads with new adaptive anchor banners）
         
       </div>
     </a>
   
   
-    <a href="/2019/09/02/One device support multi git account/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">同一设备管理多个Git帐号</div>
+    <a href="/2019/10/02/skills-for-private-pod-repo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">创建私有库的一些小技巧</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -498,11 +492,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Programmatic</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">术语解析</a>
+                <a href="javascript:void(0)" class="js-tag color5">GoogleAds</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -510,7 +500,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">GoogleAds</a>
+                <a href="javascript:void(0)" class="js-tag color3">Programmatic</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">术语解析</a>
               </li>
              
               <li class="article-tag-list-item">

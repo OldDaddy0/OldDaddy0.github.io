@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://olddaddy0.github.io">
-  <title>#OldDaddy</title>
+  <title>同一设备管理多个Git帐号 | #OldDaddy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="寻找梦想的斜杠青年！">
-<meta name="keywords" content="flutter,前端,js,javascript,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,iOS,objective-c,swift,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="#OldDaddy">
-<meta property="og:url" content="https://olddaddy0.github.io/index.html">
+  <meta name="description" content="前言在日常开发中，我们一定会遇到使用多个Git帐号或者平台的情况。比如自己造轮子的github，干私活能有免费私有仓库gitee，工作中公司搭建的私有git平台等等。那么希望在一台设备上提交不同平台的代码，我们就一定要知道如何配置SSH Key来实现验证流程（其实也不一定，使用一些成熟的可视化代码管理工具如 source tree也是可以的）。 配置SSH Key(github为🌰)打开你的终端">
+<meta name="keywords" content="Skill,Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="同一设备管理多个Git帐号">
+<meta property="og:url" content="https://olddaddy0.github.io/2019/09/02/One device support multi git account/index.html">
 <meta property="og:site_name" content="#OldDaddy">
-<meta property="og:description" content="寻找梦想的斜杠青年！">
+<meta property="og:description" content="前言在日常开发中，我们一定会遇到使用多个Git帐号或者平台的情况。比如自己造轮子的github，干私活能有免费私有仓库gitee，工作中公司搭建的私有git平台等等。那么希望在一台设备上提交不同平台的代码，我们就一定要知道如何配置SSH Key来实现验证流程（其实也不一定，使用一些成熟的可视化代码管理工具如 source tree也是可以的）。 配置SSH Key(github为🌰)打开你的终端">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/page_ssh_snapshot.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/page_ssh_newkey.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/payment.jpg">
+<meta property="og:updated_time" content="2021-04-16T09:04:56.520Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="#OldDaddy">
-<meta name="twitter:description" content="寻找梦想的斜杠青年！">
+<meta name="twitter:title" content="同一设备管理多个Git帐号">
+<meta name="twitter:description" content="前言在日常开发中，我们一定会遇到使用多个Git帐号或者平台的情况。比如自己造轮子的github，干私活能有免费私有仓库gitee，工作中公司搭建的私有git平台等等。那么希望在一台设备上提交不同平台的代码，我们就一定要知道如何配置SSH Key来实现验证流程（其实也不一定，使用一些成熟的可视化代码管理工具如 source tree也是可以的）。 配置SSH Key(github为🌰)打开你的终端">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/page_ssh_snapshot.png">
   
     <link rel="alternative" href="/atom.xml" title="#OldDaddy" type="application/atom+xml">
   
@@ -164,39 +169,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-CPM vs eCPM" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+            <article id="post-One device support multi git account" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/01/CPM vs eCPM/">CPM vs. eCPM</a>
+    <h1 class="article-title" itemprop="name">
+      同一设备管理多个Git帐号
     </h1>
   
 
         
-        <a href="/2021/01/01/CPM vs eCPM/" class="archive-article-date">
-  	<time datetime="2020-12-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-01</time>
+        <a href="/2019/09/02/One device support multi git account/" class="archive-article-date">
+  	<time datetime="2019-09-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="CPM是什么？"><a href="#CPM是什么？" class="headerlink" title="CPM是什么？"></a><code>CPM</code>是什么？</h3><p><code>CPM</code>全称为<code>Cost Per Mille</code>或者是<code>Cost Per ThousandImpression</code>, 也称千人展示成本。 CPM 是一种计价的指标。</p>
-<p>CPM是一种展示付费广告，只要展示了广告主的广告内容，广告主就为此付费。这种广告的效果不是很好，但是却能给有一定流量的网站、博客带来稳定的收入。</p>
-<h3 id="eCMP是什么？"><a href="#eCMP是什么？" class="headerlink" title="eCMP是什么？"></a><code>eCMP</code>是什么？</h3><p><code>eCPM（effective cost per mille）</code>指的就是每一千次展示可以获得的广告收入，展示的单位可以是网页，广告单元，甚至是单个广告（在 AdSense “高级报告”的“数据展示依据”下拉框中可以选择）。默认情况下，eCPM 指的都是千次网页展示（Pageview）收入。eCPM 只是用来反映网站盈利能力的参数，不代表收入。</p>
-<p>eCPM是衡量广告效果的指标</p>
-<h3 id="eCPM公式"><a href="#eCPM公式" class="headerlink" title="eCPM公式"></a><code>eCPM</code>公式</h3><blockquote>
-<p>eCPM = （广告总费用 / 测得的广告展示量总数） x 1,000</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在日常开发中，我们一定会遇到使用多个Git帐号或者平台的情况。比如自己造轮子的github，干私活能有免费私有仓库gitee，工作中公司搭建的私有git平台等等。那么希望在一台设备上提交不同平台的代码，我们就一定要知道如何配置SSH Key来实现验证流程（其实也不一定，使用一些成熟的可视化代码管理工具如 source tree也是可以的）。</p>
+<h2 id="配置SSH-Key-github为🌰"><a href="#配置SSH-Key-github为🌰" class="headerlink" title="配置SSH Key(github为🌰)"></a>配置SSH Key(github为🌰)</h2><h4 id="打开你的终端，到-ssh-目录"><a href="#打开你的终端，到-ssh-目录" class="headerlink" title="打开你的终端，到 .ssh 目录"></a>打开你的终端，到 <code>.ssh</code> 目录</h4><blockquote>
+<p>$ cd ~/.ssh</p>
 </blockquote>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
-<li><a href="https://www.techwalla.com/articles/ecpm-vs-cpm" target="_blank" rel="noopener">Techwalla - ECPM vs. CPM</a></li>
-<li><a href="https://www.zhihu.com/question/22713209" target="_blank" rel="noopener"></a></li>
-</ul>
+<h4 id="常规方法生成一个-SSH-Key"><a href="#常规方法生成一个-SSH-Key" class="headerlink" title="常规方法生成一个 SSH Key"></a>常规方法生成一个 SSH Key</h4><blockquote>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:your@email.com" target="_blank" rel="noopener">your@email.com</a>“</p>
+</blockquote>
+<h4 id="自定义生成key的名字"><a href="#自定义生成key的名字" class="headerlink" title="自定义生成key的名字"></a>自定义生成key的名字</h4><p>名字定义要清晰，因为你的设备下可能会有多个rsa文件。</p>
+<h4 id="密码的设置"><a href="#密码的设置" class="headerlink" title="密码的设置"></a>密码的设置</h4><p>看自己喜好</p>
+<p><img width="640" src="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/page_ssh_snapshot.png"></p>
+<h4 id="配置github或者其他平台"><a href="#配置github或者其他平台" class="headerlink" title="配置github或者其他平台"></a>配置github或者其他平台</h4><p>复制公钥</p>
+<blockquote>
+<p>$ pbcopy &lt; ~/.ssh/test_rsa.pub </p>
+</blockquote>
+<p>到github或者其他平台的设置项中，找到<code>SSH and GPG keys</code> 选项执行 New SSH key的操作。</p>
+<p><img width="640" src="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/page_ssh_newkey.png"></p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>键入 <code>ssh -T git@github.com</code>，一般能够看到类似下面的输出。</p>
+<blockquote>
+<p>$ ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p>
+<p>Hi [UserName]! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<p>如果你非常不幸，没能看到这样的输出，你可以直接跳到下一环节。或者执行下面一段命令将新ssh-key添加到ssh agent中，再执行测试命令。</p>
+<blockquote>
+<p>$ ssh-add ~/.ssh/test_rsa</p>
+</blockquote>
+<h2 id="配置多个SSH-Key"><a href="#配置多个SSH-Key" class="headerlink" title="配置多个SSH-Key"></a>配置多个SSH-Key</h2><p>为了将不同帐号的git服务器与对应的ssh-key关联，我们需要新增一个config文件。<br>在 <code>~/.ssh</code>路径下键入</p>
+<blockquote>
+<p>$ vim config</p>
+</blockquote>
+<p>然后键入类似下方的配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># company git service</span><br><span class="line">Host git.company.com</span><br><span class="line">HostName git.company.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">User worker</span><br><span class="line">IdentityFile ~/.ssh/gitlab_rsa</span><br><span class="line"></span><br><span class="line"># cocrash</span><br><span class="line">Host github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">User cocrash</span><br><span class="line">IdentityFile ~/.ssh/cocrash_rsa</span><br><span class="line"></span><br><span class="line"># olddaddy</span><br><span class="line">Host olddaddy.github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">User olddaddy</span><br><span class="line">IdentityFile ~/.ssh/olddaddy_rsa</span><br><span class="line"></span><br><span class="line"> ... </span><br><span class="line"> ...</span><br></pre></td></tr></table></figure>
+<p>然后保存退出。</p>
+<h2 id="两个Github帐号的冲突"><a href="#两个Github帐号的冲突" class="headerlink" title="两个Github帐号的冲突"></a>两个Github帐号的冲突</h2><p>从上面的config文件中，我们可以看到有两个<code>HostName github.com</code>相同的配置，但是用户不一样（你有两个Github帐号或者这台电脑两个程序员共享[奸笑]）。</p>
+<p>验证第二个Github的帐号</p>
+<blockquote>
+<p>$ ssh -T <a href="mailto:git@olddaddy.github.com" target="_blank" rel="noopener">git@olddaddy.github.com</a></p>
+<p>Hi OldDaddy0! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+<p>所以我们通过git clone repository的时候，如果是使用 SSH 地址，则需要使用配置如下：</p>
+<blockquote>
+<p>git clone <a href="mailto:git@olddaddy.github.com" target="_blank" rel="noopener">git@olddaddy.github.com</a>:OldDaddy0/OldDaddy0.github.io.git</p>
+</blockquote>
+<p>–<br>到目前为止，你可以愉快的玩耍Git了。当然，不是每一个人都能这么顺利的，总会有到各种各样的问题。对于异常情况这里不做一一介绍，欢迎一起讨论学习。</p>
+<p><img width="240" src="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/payment.jpg"></p>
 
       
 
@@ -210,15 +246,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Programmatic</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Skill</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">术语解析</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">广告</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		
 		</ul>
@@ -229,10 +261,82 @@
       
 
       
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://olddaddy0.github.io/2019/09/02/One device support multi git account/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/09/03/Some basic git references/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          一些可能性较高的Git使用约定
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/01/Quick start image repo with git wiki/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">创建Git图床</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -252,12 +356,30 @@
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  
+
   
 
 
@@ -282,8 +404,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

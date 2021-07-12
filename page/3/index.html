@@ -166,62 +166,40 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-five-ways-to-make-your-app-video-ad-friendly" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-daily-cpm-vs-ecpm-reference" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/29/five-ways-to-make-your-app-video-ad-friendly/">让视频广告体验更加友好的五种方法</a>
+      <a class="article-title" href="/2021/01/01/daily-cpm-vs-ecpm-reference/">【每日广告】CPM vs. eCPM</a>
     </h1>
   
 
         
-        <a href="/2019/11/29/five-ways-to-make-your-app-video-ad-friendly/" class="archive-article-date">
-  	<time datetime="2019-11-29T03:28:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-29</time>
+        <a href="/2021/01/01/daily-cpm-vs-ecpm-reference/" class="archive-article-date">
+  	<time datetime="2020-12-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Hero_M9Wdk5M.max-1000x1000.png"><br></div>
-
-<p>原文：<a href="https://www.blog.google/products/admob/five-ways-to-make-your-app-video-ad-friendly/" target="_blank" rel="noopener">Five ways to make your app video-ad friendly</a></p>
-<h4 id="允许视频数据预拉取缓存（Load-ads-well-in-advance-to-permit-buffering）"><a href="#允许视频数据预拉取缓存（Load-ads-well-in-advance-to-permit-buffering）" class="headerlink" title="允许视频数据预拉取缓存（Load ads well in advance to permit buffering）"></a>允许视频数据预拉取缓存（Load ads well in advance to permit buffering）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/4v2.max-1000x1000.png" width="320"><br></div>
-
-
-<blockquote>
-<p>The moment you load a video ad, behind the scenes the ad starts buffering (essentially pre-loading) the video</p>
+        <blockquote>
+<font size="3" color="c98367">🌟【每日广告】系列</font><br><font size="1" color="92c2c6">- 为什么有这个系列？(WHY)<br>许多人对于互联网广告行业很有兴趣，但不知道怎么入行或如何系统学习？<br>通过每天了解一些广告领域的知识，有助于积累知识的广度和深度。<br>- 这个系列是什么？(WHAT)<br>1. 常用名词解释，带你快速理解和认识名词的含义和背后的技术；<br>2. 文章分享，每日挑选一篇互联网文章进行重点摘要，并分享可能的思考方向；<br>- 谁适合阅读这个系列？(WHO)<br>想快速了解互联网广告行业知识，学习互联网商业变现的人。</font>
 </blockquote>
-<p>开始加载一个视频广告，仅仅是视频资源开始启动资源加载和缓存，所以<code>the network is the bottleneck</code>。在用户无感知的前提下，触发加载视频广告，在一定的缓存数据量后再展示广告，用户体验更好</p>
-<blockquote>
-<p>Load your ad at least 15 seconds in advance of showing it</p>
+<h3 id="CPM是什么？"><a href="#CPM是什么？" class="headerlink" title="CPM是什么？"></a><code>CPM</code>是什么？</h3><p><code>CPM</code>全称为<code>Cost Per Mille</code>或者是<code>Cost Per ThousandImpression</code>, 也称千人展示成本。 CPM 是一种计价的指标。</p>
+<p>CPM是一种展示付费广告，只要展示了广告主的广告内容，广告主就为此付费。这种广告的效果不是很好，但是却能给有一定流量的网站、博客带来稳定的收入。</p>
+<h3 id="eCMP是什么？"><a href="#eCMP是什么？" class="headerlink" title="eCMP是什么？"></a><code>eCMP</code>是什么？</h3><p><code>eCPM（effective cost per mille）</code>指的就是每一千次展示可以获得的广告收入，展示的单位可以是网页，广告单元，甚至是单个广告（在 AdSense “高级报告”的“数据展示依据”下拉框中可以选择）。默认情况下，eCPM 指的都是千次网页展示（Pageview）收入。eCPM 只是用来反映网站盈利能力的参数，不代表收入。</p>
+<p>eCPM是衡量广告效果的指标</p>
+<h3 id="eCPM公式"><a href="#eCPM公式" class="headerlink" title="eCPM公式"></a><code>eCPM</code>公式</h3><blockquote>
+<p>eCPM = （广告总费用 / 测得的广告展示量总数） x 1,000</p>
 </blockquote>
-<p>对于广告加载的超时时长或者提前预拉的时间间隔可做参考</p>
-<h4 id="及时释放无效广告（Free-unused-ads）"><a href="#及时释放无效广告（Free-unused-ads）" class="headerlink" title="及时释放无效广告（Free unused ads）"></a>及时释放无效广告（Free unused ads）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/2v2.max-1000x1000.png" width="320"><br></div>
-
-<p>场景例子：加载了激励视频广告，但用户拒绝了观看，及时释放该广告。（内存、视频解码器…)</p>
-<blockquote>
-<p>On Android, we recommend you null your reference to the ad, and if you’re using native ads, call <code>UnifiedNativeAd.destroy()</code> on the main thread. On iOS, set your reference to nil.</p>
-</blockquote>
-<p>Android 推荐将广告引用置空，如果是调用原生广告，需要在住线程调用<code>UnifiedNativeAd.destroy()</code>；iOS则是将引用置 nil。</p>
-<h4 id="避免加载多个广告（Avoid-loading-multiple-concurrent-ads）"><a href="#避免加载多个广告（Avoid-loading-multiple-concurrent-ads）" class="headerlink" title="避免加载多个广告（Avoid loading multiple concurrent ads）"></a>避免加载多个广告（Avoid loading multiple concurrent ads）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/1v3.max-1000x1000.png" width="320"><br></div>
-
-<blockquote>
-<p>Every phone has a limit to the number of videos it can hold in a prepared state.</p>
-</blockquote>
-<p>在这个大前提下，仅加载你需要的广告，以获得最好的成功曝光体验。</p>
-<h4 id="在广告loaded回调后再展示广告（Don’t-show-an-ad-before-receiving-a-notification-that-it-has-loaded）"><a href="#在广告loaded回调后再展示广告（Don’t-show-an-ad-before-receiving-a-notification-that-it-has-loaded）" class="headerlink" title="在广告loaded回调后再展示广告（Don’t show an ad before receiving a notification that it has loaded）"></a>在广告loaded回调后再展示广告（Don’t show an ad before receiving a notification that it has loaded）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/5v3.max-1000x1000.png" width="320"><br></div>
-
-<p>GMA SDK通过通知notifications同步视频广告的加载及播放状态。</p>
-<blockquote>
-<p>On Android, this notification arrives through AdListener.onAdLoaded().</p>
-</blockquote>
-<h4 id="在播放视频广告前释放应用自身的视频资源（Be-extra-cautious-combining-video-ads-with-video-content）"><a href="#在播放视频广告前释放应用自身的视频资源（Be-extra-cautious-combining-video-ads-with-video-content）" class="headerlink" title="在播放视频广告前释放应用自身的视频资源（Be extra cautious combining video ads with video content）"></a>在播放视频广告前释放应用自身的视频资源（Be extra cautious combining video ads with video content）</h4><div align="center"><br>    <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3v2_AewBdm9.max-1000x1000.png" width="320"><br></div>
-
-<p>内存中避免同时加载着多个视频资源（不管都是视频广告还是应用内的视频内容）。</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="https://www.techwalla.com/articles/ecpm-vs-cpm" target="_blank" rel="noopener">Techwalla - ECPM vs. CPM</a></li>
+<li><a href="https://www.zhihu.com/question/22713209" target="_blank" rel="noopener">广告投放计费方式中，CPM和eCPM的区别是什么?</a></li>
+</ul>
 
       
 
@@ -235,11 +213,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">GoogleAds</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">程序化广告</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">广告</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">术语解析</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">每日广告</a>
         		</li>
       		
 		</ul>
@@ -277,7 +259,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -370,6 +352,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">程序化广告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">术语解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">每日广告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">GoogleAds</a>
               </li>
              
@@ -383,18 +377,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">术语解析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">程序化广告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">每日广告</a>
               </li>
              
               <li class="article-tag-list-item">

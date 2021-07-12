@@ -166,30 +166,57 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-9ef0e2e0a718dddb7eb169268ecf2153" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+    <article id="post-quick-start-image-repo-with-git-wiki" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/01/9ef0e2e0a718dddb7eb169268ecf2153/">Technical Support</a>
+      <a class="article-title" href="/2019/09/01/quick-start-image-repo-with-git-wiki/">创建Git图床</a>
     </h1>
   
 
         
-        <a href="/2019/01/01/9ef0e2e0a718dddb7eb169268ecf2153/" class="archive-article-date">
-  	<time datetime="2018-12-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-01</time>
+        <a href="/2019/09/01/quick-start-image-repo-with-git-wiki/" class="archive-article-date">
+  	<time datetime="2019-08-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>App Technical Support </p>
-<p>Email：<a href="mailto:lianghwen@live.cn" target="_blank" rel="noopener">lianghwen@live.cn</a></p>
-<p>TEl: +86 15013836826</p>
-<p>© Haowen Liang</p>
+        <p>利用 github 的 wiki 来管理独立图床，而非通过创建单独的图床repo或者在当前工程repo中将图片和代码放在一起。</p>
+<ol>
+<li><p><strong>创建 Wiki 页面</strong></p>
+<p> 在创建图床的项目下，点击项目的 wiki 标签</p>
+<p> <img width="640" src="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/github_wiki_0.png"></p>
+<p> 确保已经创建了 wiki 页面</p>
+<p> <img width="640" src="https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/github_wiki_1.png"></p>
+</li>
+<li><p><strong>Clone Wiki</strong></p>
+<p> 从<strong>Clone this wiki locally</strong>拿到git url</p>
+<blockquote>
+<p>$ git clone <a href="https://github.com/[username]/projectname.wiki.git" target="_blank" rel="noopener">https://github.com/[username]/projectname.wiki.git</a></p>
+</blockquote>
+</li>
+<li><p><strong>存放图片到库一级目录或创建二级图片目录</strong></p>
+<p> 建议创建一个图库的单独目录 images</p>
+</li>
+<li><p><strong>上传Git管理</strong></p>
+<p> 常见的 git 提交操作</p>
+</li>
+<li><p><strong>引用图片</strong></p>
+<p> 完整路径访问：</p>
+<blockquote>
+<p><a href="https://raw.githubusercontent.com/wiki/[username]/[repository]/[folderifexsist]/[filename]" target="_blank" rel="noopener">https://raw.githubusercontent.com/wiki/[username]/[repository]/[folderifexsist]/[filename]</a></p>
+</blockquote>
+<p> wiki文档访问：</p>
+<blockquote>
+<p>[folderifexsist]/[filename]</p>
+</blockquote>
+</li>
+</ol>
 
       
 
@@ -203,7 +230,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">App</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Skill</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		
 		</ul>
@@ -241,7 +272,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span>
+      <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
     </nav>
   
 
@@ -334,6 +365,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">程序化广告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">术语解析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">每日广告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">GoogleAds</a>
               </li>
              
@@ -347,18 +390,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">术语解析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">程序化广告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">每日广告</a>
               </li>
              
               <li class="article-tag-list-item">

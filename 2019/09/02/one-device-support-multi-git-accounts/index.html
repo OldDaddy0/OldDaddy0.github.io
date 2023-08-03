@@ -185,7 +185,7 @@
 <p>$ cd ~&#x2F;.ssh</p>
 </blockquote>
 <h4 id="常规方法生成一个-SSH-Key"><a href="#常规方法生成一个-SSH-Key" class="headerlink" title="常规方法生成一个 SSH Key"></a>常规方法生成一个 SSH Key</h4><blockquote>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#114;&#x40;&#101;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x79;&#111;&#117;&#114;&#x40;&#101;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#117;&#x72;&#64;&#101;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;">&#121;&#x6f;&#117;&#x72;&#64;&#101;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;</a>“</p>
 </blockquote>
 <h4 id="自定义生成key的名字"><a href="#自定义生成key的名字" class="headerlink" title="自定义生成key的名字"></a>自定义生成key的名字</h4><p>名字定义要清晰，因为你的设备下可能会有多个rsa文件。</p>
 <h4 id="密码的设置"><a href="#密码的设置" class="headerlink" title="密码的设置"></a>密码的设置</h4><p>看自己喜好</p>
@@ -198,7 +198,7 @@
 <p><img width=640 src='https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/page_ssh_newkey.png'></img></p>
 <h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>键入 <code>ssh -T git@github.com</code>，一般能够看到类似下面的输出。</p>
 <blockquote>
-<p>$ ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>$ ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#109;</a></p>
 <p>Hi [UserName]! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 </blockquote>
 <p>如果你非常不幸，没能看到这样的输出，你可以直接跳到下一环节。或者执行下面一段命令将新ssh-key添加到ssh agent中，再执行测试命令。</p>
@@ -216,12 +216,12 @@
 <h2 id="两个Github帐号的冲突"><a href="#两个Github帐号的冲突" class="headerlink" title="两个Github帐号的冲突"></a>两个Github帐号的冲突</h2><p>从上面的config文件中，我们可以看到有两个<code>HostName github.com</code>相同的配置，但是用户不一样（你有两个Github帐号或者这台电脑两个程序员共享[奸笑]）。</p>
 <p>验证第二个Github的帐号</p>
 <blockquote>
-<p>$ ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#x6f;&#x6c;&#100;&#100;&#97;&#100;&#x64;&#121;&#x2e;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#116;&#x40;&#x6f;&#x6c;&#100;&#100;&#97;&#100;&#x64;&#121;&#x2e;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>$ ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x6f;&#108;&#100;&#x64;&#97;&#x64;&#100;&#x79;&#46;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#x6f;&#108;&#100;&#x64;&#97;&#x64;&#100;&#x79;&#46;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <p>Hi OldDaddy0! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 </blockquote>
 <p>所以我们通过git clone repository的时候，如果是使用 SSH 地址，则需要使用配置如下：</p>
 <blockquote>
-<p>git clone <a href="mailto:&#x67;&#x69;&#x74;&#64;&#x6f;&#x6c;&#x64;&#x64;&#97;&#x64;&#x64;&#x79;&#x2e;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#x6f;&#x6c;&#x64;&#x64;&#97;&#x64;&#x64;&#x79;&#x2e;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;</a>:OldDaddy0&#x2F;OldDaddy0.github.io.git</p>
+<p>git clone <a href="mailto:&#103;&#105;&#x74;&#x40;&#x6f;&#x6c;&#100;&#x64;&#x61;&#100;&#x64;&#121;&#x2e;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#109;">&#103;&#105;&#x74;&#x40;&#x6f;&#x6c;&#100;&#x64;&#x61;&#100;&#x64;&#121;&#x2e;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#46;&#99;&#111;&#109;</a>:OldDaddy0&#x2F;OldDaddy0.github.io.git</p>
 </blockquote>
 <p>–<br>到目前为止，你可以愉快的玩耍Git了。当然，不是每一个人都能这么顺利的，总会有到各种各样的问题。对于异常情况这里不做一一介绍，欢迎一起讨论学习。</p>
 <p><img width=240 src='https://raw.githubusercontent.com/wiki/OldDaddy0/OldDaddy0.github.io/images/payment.jpg'></img></p>
@@ -486,19 +486,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">GoogleAds</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">广告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Skill</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">GoogleAds</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">广告</a>
               </li>
              
               <li class="article-tag-list-item">
